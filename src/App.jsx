@@ -11,7 +11,7 @@ function App() {
   const handleupload = async () => {
     console.log("handle successfull");
     try{
-     const res =await axios.post('http://localhost:4000/image-upload', image).then((res)=>{console.log(res)}).catch((e)=>console.log(e))
+     const res =await axios.post('/image-upload', image).then((res)=>{console.log(res)}).catch((e)=>console.log(e))
      console.log(res);
     }
     catch(error)
@@ -23,7 +23,7 @@ function App() {
   }
   const fecting = async () => {
     console.log("hello1");
-    await fetch('http://localhost:4000/api/image').then(response => response.json()).then(data => {
+    await fetch('/api/image').then(response => response.json()).then(data => {
       console.log("./images/removed-"+data.path);
       setFilename("./images/removed-"+data.path)
     });
