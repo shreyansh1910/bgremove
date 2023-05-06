@@ -6,12 +6,12 @@ const multer = require('multer');
 const removebg = require('remove.bg');
 
 const path = require('path');
-const corsOrigin = 'http://localhost:3000';
+const corsOrigin = process.env.PORT || "http://localhost:3000";
 var paths = __dirname + '/../public/images/';
 var outputFile = __dirname + '/../public/images/';
 var filename;
 
-app.use(express.static(__dirname + "../.."));
+app.use(express.static(__dirname + "../public"));
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
