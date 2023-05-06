@@ -12,9 +12,7 @@ var outputFile = __dirname + '/../public/images/';
 var filename;
 
 app.use(express.static(__dirname + "../.."));
-app.use(cors({
-    origin: [corsOrigin], methods: ['GET', 'POST'], credentials: true
-}));
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
