@@ -38,7 +38,7 @@ app.post('/image-upload', Imageupload.array("my-image-file"), async function (re
     paths = paths + filename;
     outputFile = outputFile + "removed-" + filename;
     
-   // await myRemoveBgFunction(paths, outputFile);
+   await myRemoveBgFunction(paths, outputFile);
     console.log("got a post request");
     res.send("got a post request");
 })
