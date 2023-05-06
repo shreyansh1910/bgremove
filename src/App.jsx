@@ -25,7 +25,7 @@ function App() {
     console.log("hello1");
     await fetch('/api/image').then(response => response.json()).then(data => {
       console.log("./images/removed-"+data.path);
-      setFilename("./images/removed-"+data.path)
+      setFilename("/images/removed-"+data.path)
     });
 
 
