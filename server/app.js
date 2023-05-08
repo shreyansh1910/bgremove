@@ -6,7 +6,7 @@ const multer = require('multer');
 const removebg = require('remove.bg');
 
 const path = require('path');
-const corsOrigin = process.env.PORT || "http://localhost:3000";
+const corsOrigin = "http://localhost:3000";
 var paths = __dirname + '/../public/images/';
 var outputFile = __dirname + '/../public/images/';
 var filename;
@@ -56,7 +56,7 @@ async function myRemoveBgFunction(path, outputFile) {
     console.log("sadlife api got used u got one chance less now ");
     const result = await removebg.removeBackgroundFromImageFile({
         path,
-        apiKey: "1bNtgP9RRgGMg8EeQmdHBo7L",
+        apiKey: "N1MBWjWFB9iRoDCRwsXMuNhw",
         size: "regular",
         type: "person",
         crop: true,
